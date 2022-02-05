@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Plastic Pollution | Donation</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+        integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="donate.css" rel="stylesheet" type="text/css" />
+    <link href="img/logo.png" rel="icon" type="image/png" sizes="16x16" />
+</head>
+
+<body>
+
+    <!-- Start Nav Section -->
+    <div class="nav-section">
+        <div class="logo">
+            <img src="./img/logo.png" alt="epplogo" />
+        </div>
+        <nav>
+            <a href="../homepage/home.html">Home</a>
+            <a href="../blogpage/blogpage.html">Blog</a>
+            <a href="../newspage/newspage.html">News</a>
+            <a href="../shoppingpage/shopping.html">Shopping</a>
+            <a href="../aboutuspage/aboutpage.html">About</a>
+            <a href="#" class="active">Donate</a>
+            <div class="animation"></div>
+        </nav>
+    </div>
+    <!-- End Nav Section -->
+
+    <!-- Start Wave Animation -->
+    <div class="wave-section">
+        <div class="wave wave1"></div>
+        <div class="wave wave2"></div>
+        <div class="wave wave3"></div>
+        <div class="wave wave4"></div>
+    </div>
+    <!-- End Wave Animation -->
+
+
+    <div class="content">
+
+        <div class="donation-form">
+
+            <!-------------------------------------------- Donation Form ------------------------------------------------------------------ -->
+
+            <div class="wrapper">
+                <span class="ribbon"></span>
+
+                <button onclick="closeform()"><i class="fas fa-times"></i></button>
+
+                <h2>"We need your support to help us end plastic pollution. Through projects in Education, Activism,
+                    Advocacy and Science, we’re working to foster sustainable communities and to create change in
+                    consumer behavior, corporate practices and public policy"</h2>
+                <form action="" method="">
+
+                    <!-- Personal Detail  -->
+                    <div class="personal-detail">
+                        <h4>Personal Detailed</h4>
+                        <div class="input-group">
+                            <div class="input-box">
+                                <input type="text" name="name" id="name" class="name" placeholder="Full Name"
+                                    autocomplete="off" required>
+                                <i class="fa fa-user icon"></i>
+                            </div>
+                            <div class="input-box">
+                                <input type="text" name="nickname" id="nickname" class="name" placeholder="Nick Name"
+                                    required>
+                                <i class="fa fa-user icon"></i>
+                            </div>
+                        </div>
+                        <div class="input-group">
+                            <div class="input-box">
+                                <input type="email" name="email" id="email" class="name" placeholder="Email Address"
+                                    autocomplete="off" required>
+                                <i class="fa fa-envelope icon"></i>
+                            </div>
+                        </div>
+
+                        <div class="input-group">
+                            <div class="input-box">
+                                <h4>Date of Birth</h4>
+                                <input type="text" placeholder="DD" class="dob" required>
+                                <input type="text" placeholder="MM" class="dob" required>
+                                <input type="text" placeholder="YYYY" class="dob" required>
+                            </div>
+                            <div class="input-box">
+                                <h4>Gender</h4>
+                                <input type="radio" name="gender" id="male" class="radio" checked>
+                                <label for="male">Male</label>
+
+                                <input type="radio" name="gender" id="female" class="radio">
+                                <label for="female">Female</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Payment-method -->
+                    <div class="payment-method">
+
+                        <h4>Payment Detailed</h4>
+                        <div class="input-group">
+                            <div class="input-box">
+                                <input type="radio" name="payment" id="CC" class="radio">
+                                <label for="CC"><span><i class="fab fa-cc-visa"></i> Credit Card</span></label>
+
+                                <input type="radio" name="payment" id="PP" class="radio">
+                                <label for="PP"><span><i class="fab fa-cc-paypal"></i> Paypal</span></label>
+
+                                <input type="radio" name="payment" id="other" class="radio">
+                                <label for="other"><span><i class="fas fa-money-check-alt"></i> Other</span></label>
+                            </div>
+                        </div>
+
+                        <div class="input-group">
+                            <div class="input-box">
+                                <input type="tel" placeholder="Card Number" class="name" required>
+                                <i class="fa fa-credit-card icon"></i>
+                            </div>
+                        </div>
+
+                        <div class="input-group">
+                            <div class="input-box">
+                                <input type="tel" placeholder="Card CVC" class="name" required>
+                                <i class="fa fa-user icon"></i>
+                            </div>
+                            <div class="input-box">
+                                <select name="date" id="date">
+                                    <option value="0" selected>01 jun</option>
+                                    <option value="1">02 jun</option>
+                                    <option value="2">03 jun</option>
+                                </select>
+                                <select name="year" id="year">
+                                    <option value="0" selected>2021</option>
+                                    <option value="1">2020</option>
+                                    <option value="2">2019</option>
+                                </select>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <!-- Campagin  -->
+                    <div class="campagin">
+                        <h4 style="text-decoration: underline;font-style: italic;font-size: 17px;">Please select a type
+                            of Campagin that you wanna in...</h4>
+                        <div class="input-group">
+                            <div class="input-box">
+                                <input type="checkbox" name="select" id="C1">
+                                <label for="C1"> Campagin 1(For feeding Marine Animals)</label>
+                            </div>
+                            <div class="input-box">
+                                <input type="checkbox" name="select" id="C2">
+                                <label for="C2"> Campagin 2(To clean beaches and communities)</label>
+                            </div>
+                            <div class="input-box">
+                                <input type="checkbox" name="select" id="C3">
+                                <label for="C3"> Campagin 3(Help create a market for recycled and ocean plastic)</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Button  -->
+                    <div class="donate-button">
+                        <div class="input-group">
+                            <div class="input-box">
+                                <button type="submit">
+                                    <span><i class="fas fa-donate"></i> Do</span>
+                                    <span>nate</span>
+                                    Appreciate You
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                </form>
+            </div>
+            <!----------------------------- Donate form enddddd ------------------------------------------------------------------------>
+
+        </div>
+
+        <div class="donation">
+
+            <div class="title">
+
+                <ul>
+                    <li>D</li>
+                    <li>O</li>
+                    <li>N</li>
+                    <li>A</li>
+                    <li>T</li>
+                    <li>E</li>
+                    <li>!!!</li>
+                </ul>
+
+            </div>
+
+            <div class="container">
+
+                <div class="content-box">
+
+                    <h2>Why Donate?</h2>
+                    <p>
+                        The End of Plastic Pollution Foundation is an independent foundation that shows that things can
+                        be done differently! Our environmental organization plays an active role in the global debate on
+                        plastic by working with government representatives and scientists. We dedicate our time to
+                        finding alternatives to plastic, to the education of children, and conducting campaigns through
+                        which we poke the government, industry, and small businesses – in a friendly way.
+
+                        <br />
+                        <br />And this approach has shown great success! We are proud of what we have already achieved
+                        throughout our short existence.
+                    </p>
+
+                    <h2>Your Donation will provide...</h2>
+
+                </div>
+
+                <div class="group">
+                    <div class="imgbox">
+                        <img src="img/img11.jpg" alt="img11" />
+                        <div class="text">
+                            <h3>Donate (3000MMK)</h3>
+                            <p>Help Take 3 stop plastic pollution through inspiring behaviour change</p>
+                        </div>
+                    </div>
+
+                    <div class="imgbox">
+                        <img src="img/img13.jpg" alt="img13" />
+                        <div class="text">
+                            <h3>Donate (5000MMK)</h3>
+                            <p style="padding: 0 20px;">Humans invented plastic and animals are harmed by it. They eat
+                                it, they get caught in it, or get sick because of it. Plastic pollution occured so
+                                rapidly that animals were unable to adjust their behaviour around this new material.</p>
+                        </div>
+                    </div>
+
+                    <div class="imgbox">
+                        <img src="img/img12.jpg" alt="img12" />
+                        <div class="text">
+                            <h3>Donate (10000MMK)</h3>
+                            <p>Help Take 3 remove 1,500 pieces of rubbish from our beaches</p>
+                        </div>
+                    </div>
+
+                    <div class="imgbox">
+                        <img src="img/img14.jpg" alt="img14" />
+                        <div class="text">
+                            <h3>Donate (30000MMK)</h3>
+                            <p>Help Take 3 provide education to an entire school classroom</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="amount">
+                <h3>Select an amount</h3>
+                <div class="okane">
+                    <span onclick="openform()">1000MMK</span>
+                    <span onclick="openform()">2000MMK</span>
+                    <span onclick="openform()">3000MMK</span>
+                    <span onclick="openform()">4000MMK</span>
+                    <span onclick="openform()">5000MMK</span>
+                    <span onclick="openform()">10000MMK</span>
+                    <span onclick="openform()">Other</span>
+                </div>
+                <p>Add 3% to cover the transaction fee : <i class="far fa-check-circle"></i></p>
+            </div>
+        </div>
+
+
+    </div>
+
+    <!-- Start Footer Section -->
+    <footer>
+        <div class="bg"></div>
+        <img src="img/fish.png" alt="fish" />
+        <div class="first-row">
+            <div>
+                <img src="img/logo.png" alt="logo" />
+                <div class="subscribe">
+                    <h4>Subscribe</h4>
+                    <p>Register and get notified about all the news & updates before it gets too late.</p>
+                    <div class="sub-form">
+                        <input type="email" name="email" id="email" class="form-control"
+                            placeholder="Your email address" autocomplete="off" />
+                        <button type="submit" class="btn">Send</button>
+                    </div>
+                </div>
+            </div>
+            <div class="quick-link">
+                <h4>Quick Link</h4>
+                <p><i class="fas fa-chevron-right"></i><a href="../homepage/home.html">Home Page</a></p>
+                <p><i class="fas fa-chevron-right"></i><a href="../blogpage/blogpage.html">Blog</a></p>
+                <p><i class="fas fa-chevron-right"></i><a href="../newspage/newspage.html">News</a></p>
+                <p><i class="fas fa-chevron-right"></i><a href="../shoppingpage/shopping.html">Shopping</a></p>
+                <p><i class="fas fa-chevron-right"></i><a href="../aboutuspage/aboutpage.html">About Us</a></p>
+                <p><i class="fas fa-chevron-right"></i><a href="../donatepage/donatepage.html">Donate</a></p>
+            </div>
+            <div class="legal">
+                <h4>Legal</h4>
+                <p><i class="fas fa-chevron-right"></i><span>Terms of Use</span></p>
+                <p><i class="fas fa-chevron-right"></i><span>Privacy Policy</span></p>
+                <p><i class="fas fa-chevron-right"></i><span>Sitemap</span></p>
+            </div>
+            <div class="contact">
+                <h4>Contact</h4>
+                <p><i class="fas fa-map-marker-alt"></i><a href="#">Street, Mandalay</a></p>
+                <p><i class="fas fa-phone-alt"></i><a href="tel:09123456789">+959-123-456-789</a></p>
+                <p><i class="fas fa-envelope"></i><a
+                        href="mailto:datalandtechnology@gmail.com">datalandtechonology@gmail.com</a></p>
+            </div>
+        </div>
+        <div class="second-row">
+            <div class="left-section">
+                <small>Copyright © 2021 End of plastic pollution. All rights reserved.</small>
+                <small>Terms of Use</small>
+                <small>Privacy Policy</small>
+            </div>
+
+            <div class="right-section">
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-youtube"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-google"></i></a>
+            </div>
+        </div>
+    </footer>
+    <!-- End Footer Section -->
+    <!-- footer part_____________________________________________________ -->
+    <!-- <div class="footer">
+
+        <div class="footer-flex">
+
+            <div class="box1">
+                <img src="./img/logo.png" alt="epplogo" style="cursor: pointer;" />
+            </div>
+
+            <div class="box2">
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Donation</a></li>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="#">News</a></li>
+                    <li><a href="#">Shopping</a></li>
+                    <li><a href="#">About Us</a></li>
+                </ul>
+
+            </div>
+
+            <div class="box3">
+                <ul>
+                    <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                    <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                    <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                </ul>
+                <ul>
+                    <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
+                    <li><a href="#"><i class="fab fa-youtube"></i></a></li>
+                    <li><a href="#"><i class="fas fa-envelope"></i></a></li>
+                </ul>
+            </div>
+
+            <div class="box4">
+                <ul>
+                    <li>
+                        <a href="#"><img
+                                src="https://www.plasticsoupfoundation.org/wp-content/uploads/2019/07/anbi-transparent-white.png"
+                                alt="company1"></a>
+                    </li>
+                    <li>
+                        <a href="#"><img
+                                src="https://www.plasticsoupfoundation.org/wp-content/uploads/2019/07/nationale-postcode-loterij-1-logo-png-transparent.png"
+                                alt="company2"></a>
+                    </li>
+                    <li>
+                        <a href="#"><img
+                                src="https://www.plasticsoupfoundation.org/wp-content/uploads/2019/07/cbf-lofo.png"
+                                alt="company3"></a>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+
+        <div class="last-content">
+
+        </div>
+
+    </div> -->
+
+
+    <script type="text/javascript">
+
+        let donationform = document.querySelector(".donation-form"),
+            donation = document.querySelector(".donation");
+
+        function openform() {
+            donation.style.filter = "blur(5px)";
+            donationform.style.display = "flex";
+        }
+
+        function closeform() {
+            donation.style.filter = "blur(0px)";
+            donationform.style.display = "none";
+        }
+
+    </script>
+</body>
+
+</html>
+
+
+
+
+<!-- https://www.take3.org/donate/ -->
+
+<!-- https://secure.squarespace.com/checkout/donate?donatePageId=5b185ee888251b132aff513f -->

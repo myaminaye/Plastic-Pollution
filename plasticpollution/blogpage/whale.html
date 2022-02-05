@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Whale Fluke Identification</title>
+	<link href="img/logo.png" rel="icon" type="image/png" sizes="16x16" />
+
+	<style type="text/css">
+
+		*{
+		    padding: 0;
+		    margin: 0;
+		    box-sizing: border-box;
+		}
+
+		:root{
+		    --first-color: #38bfee;
+		    --second-color: #25a8d5;
+		    --third-color: #1895c0;
+		}
+
+		body{
+		    font-family: sans-serif;
+		}
+		
+
+		/* ------
+		Navigation Bar Section
+		----- */
+
+		.nav-section{
+		    width: 100%;
+		    height: 80px;
+
+		    padding: 0 10px 0 50px;
+
+		    display: flex;
+		    justify-content: space-between;
+		    align-items: center;
+
+		    position: absolute;
+
+		    z-index: 1000;
+		}
+
+		.nav-section > .logo{
+		    height: 100%;
+		}
+
+		.nav-section > .logo > img{
+		    width: 150px;
+		}
+
+		.nav-section > nav{
+		    width: 700px;
+		    height: 50px;
+		    background: #f4f4f4;
+		    border-radius: 8px;
+		    border: 2px solid var(--first-color);
+
+		    display: flex;
+		    justify-content: center;
+
+		    position: relative;
+		}
+
+		.nav-section > nav > a{
+		    height: 100%;
+
+		    text-decoration: none;
+		    text-align: center;
+		    text-transform: uppercase;
+		    
+		    color: var(--first-color);
+		    font-size: 15px;
+		    font-weight: 600;
+		    line-height: 50px;
+		    
+		    display: inline-block;
+
+		    margin: 0;
+		    padding: 0;
+
+		    position: relative;
+		    z-index: 1;
+		}
+
+		.nav-section > nav > a:nth-child(1) {
+		    width: 100px;
+		}
+
+		.nav-section > nav > a:nth-child(2) {
+		    width: 100px;
+		}
+
+		.nav-section > nav > a:nth-child(3) {
+		    width: 120px;
+		}
+
+		.nav-section > nav > a:nth-child(4) {
+		    width: 160px;
+		}
+
+		.nav-section > nav > a:nth-child(5) {
+		    width: 110px;
+		}
+
+		.nav-section > nav > a:nth-child(6){
+		    width: 110px;
+		}
+
+		.nav-section > nav > a:hover,
+		.nav-section > nav > a.active{
+		    color: #fff;
+		    transition: all 0.5s;
+		}
+
+
+		.nav-section > nav > .animation{
+		    height: 100%;
+		    border-radius: 6.8px;
+
+		    position: absolute;
+		    top: 0;
+
+		    z-index: 0;
+
+		    transition: all 0.5s ease;
+		}
+
+		.nav-section > nav > a:hover ~ .animation{
+		    background: var(--first-color);
+		}
+
+		.nav-section > nav > a.active::before{
+		    content: "";
+
+		    width: 100%;
+		    height: 100%;
+		    background: var(--first-color);
+		    border-radius: 6.8px;
+
+		    box-sizing: border-box;
+
+		    position: absolute;
+		    top: 0;
+		    left: 3.8px;
+
+		    z-index: -1;
+		}
+
+		.nav-section > nav > a:nth-child(1):hover ~ .animation{
+		    width: 100px;
+		    left: 0;
+		}
+
+		.nav-section > nav > a:nth-child(2):hover ~ .animation{
+		    width: 100px;
+		    left: 100px;
+		}
+
+		.nav-section > nav > a:nth-child(3):hover ~ .animation{
+		    width: 120px;
+		    left: 200px;
+		}
+
+		.nav-section > nav > a:nth-child(4):hover ~ .animation{
+		    width: 160px;
+		    left: 320px;
+		}
+
+		.nav-section > nav > a:nth-child(5):hover ~ .animation{
+		    width: 110px;
+		    left: 480px;
+		}
+
+		.nav-section > nav > a:nth-child(6):hover ~ .animation{
+		    width: 110px;
+		    left: 590px;
+		}
+
+
+		/* ------ 
+		Wave Animation Section 
+		------ */
+		.wave-section{
+		    width: 100%;
+		    height: 100vh;
+
+		    display: flex;
+		    justify-content: center;
+		    align-items: center;
+		    flex-direction: column;
+
+		    background: url(img/whale1.jpg);
+		    background-size: cover;
+
+		    position: relative;
+
+		    overflow: hidden;
+		}
+
+		.wave-section>h1{
+			text-align: center;
+			font-size: 55px;
+			font-weight: 900;
+			color: rgba(255,255,255,0.75);
+
+			-webkit-text-stroke: 1px #000;
+		}
+
+		.wave-section > .wave{
+		    width: 100%;
+		    height: 100px;
+		    background-image: url("./img/wave.png");
+		    background-size: 1000px 100px;
+
+		    position: absolute;
+		    left: 0;
+		}
+
+		.wave-section > .wave.wave1{
+		    opacity: 1;
+
+		    bottom: 0;
+
+		    animation: waveani 20s infinite linear;
+		    animation-delay: 0s;
+
+		    z-index: 999;
+		}
+
+		.wave-section > .wave.wave2{
+		    opacity: 0.5;
+
+		    bottom: 10px;
+
+		    animation: waveani1 15s infinite linear;
+		    animation-delay: -5s;
+
+		    z-index: 998;
+		}
+
+		.wave-section > .wave.wave3{
+		    opacity: 0.2;
+
+		    bottom: 15px;
+
+		    animation: waveani 20s infinite linear;
+		    animation-delay: -2s;
+
+		    z-index: 997;
+		}
+
+		.wave-section > .wave.wave4{
+		    opacity: 0.7;
+
+		    bottom: 10px;
+
+		    animation: waveani1 10s infinite linear;
+		    animation-delay: -5s;
+
+		    z-index: 996;
+		}
+
+
+		@keyframes waveani{
+		    0%{
+		        background-position-x: 0px;
+		    }
+
+		    100%{
+		        background-position-x: 1000px;
+		    }
+		}
+
+		@keyframes waveani1{
+		    0%{
+		        background-position-x: 0px;
+		    }
+
+		    100%{
+		        background-position-x: -1000px;
+		    }
+		}
+
+		/*-------------
+		Content Section
+		-------------*/
+		.content-section{
+			width: 100%;
+			min-height: 100vh;
+
+			background: linear-gradient(#38BFEE,#25A8D5,#1895C0);
+		}
+
+
+
+	</style>
+
+</head>
+<body>
+
+	<!-- Start Nav Section -->
+    <div class="nav-section">
+        <div class="logo">
+            <img src="./img/logo.png" alt="logo" />
+        </div>
+        <nav>
+            <a href="../homepage/home.html">Home</a>
+            <a href="#" class="active">Blog</a>
+            <a href="../newspage/newspage.html">News</a>
+            <a href="../shoppingpage/shopping.html">Shopping</a>
+            <a href="../aboutuspage/aboutpage.html">About</a>
+            <a href="../donatepage/donatepage.html">Donate</a>
+            <div class="animation"></div>
+        </nav>
+    </div>
+    <!-- End Nav Section -->
+
+    <!-- Start Wave Animation -->
+    <div class="wave-section">
+    	<h1>Which Whale am I Watching? A Visual Guide to Identifying Whales by Their Tails</h1>
+        <div class="wave wave1"></div>
+        <div class="wave wave2"></div>
+        <div class="wave wave3"></div>
+        <div class="wave wave4"></div>
+    </div>
+    <!-- End Wave Animation -->
+
+    <div class="content-section">
+    	
+    </div>
+
+</body>
+</html>
